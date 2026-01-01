@@ -1,0 +1,22 @@
+Port 22
+Protocol 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+IgnoreRhosts yes
+
+X11Forwarding no
+AllowAgentForwarding no
+Subsystem sftp /bin/false
+
+Match User proxyuser
+    AllowTcpForwarding yes
+    PermitTTY yes
+    X11Forwarding no
+    AllowAgentForwarding no
+

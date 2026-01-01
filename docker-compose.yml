@@ -1,0 +1,8 @@
+services:
+  sshproxy:
+    build: .
+    container_name: sshproxy-server
+    restart: always
+    ports:
+      - "2222:22"
+
