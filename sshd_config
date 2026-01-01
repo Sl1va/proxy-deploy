@@ -16,7 +16,7 @@ Subsystem sftp /bin/false
 
 Match User proxyuser
     AllowTcpForwarding yes
-    PermitTTY yes
+    PermitTTY no
     X11Forwarding no
     AllowAgentForwarding no
 
